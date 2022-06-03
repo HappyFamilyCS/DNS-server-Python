@@ -1,0 +1,67 @@
+
+
+The Domain Name System (DNS) Server is a server that is specifically used for matching website hostnames (like example.com)to their corresponding Internet Protocol or IP addresses. The DNS server contains a database of public IP addresses and their corresponding domain names.  Every device connected to the internet has a unique IP address that helps to identify it, according to the IPv4 or IPV6 protocols. The same goes for web servers that host websites. For example, the IP address of one CDNetworks server located in Mountain View, California is 157.185.170.144. 
+
+DNS servers help us avoid memorization of such long numbers in IP addresses (and even more complex alphanumeric ones in the IPV6 system) as they automatically translate the website names we enter into the browser address bar into these numbers so that the servers can load the right web pages.
+Introduction to the Domain Name System
+
+To understand the role of the DNS Server, it is important to know about the Domain Name System. The Domain Name System is essentially a phonebook of the internet. Just like how a phonebook matches individuals to a phone number, the DNS matches a website name to their corresponding IP address.
+What is DNS?
+
+The DNS is a system of records of domain names and IP addresses that allows browsers to find the right IP address that corresponds to a hostname URL entered into it. When we try to access a website, we generally type in their domain names, like cdnetworks.com or wired.com or nytimes.com, into the web browser. Web browsers however need to know the exact IP addresses to load content for the website. The DNS is what translates the domain names to the IP addresses so that the resources can be loaded from the website’s server.
+
+Sometimes, websites can have numerous IP addresses corresponding to a single domain name. For example, large sites like Google will have users querying a server from distant parts of the world. The server that a computer from Singapore tries to query will likely be different from the one a different computer from say Toronto will try to reach, even if the site name entered in the browser is the same. This is where DNS caching comes in.
+DNS Caching 
+
+DNS caching is the process of storing DNS data on the DNS records closer to a requesting client to be able to resolve the DNS query earlier. This avoids the problem of additional queries further down the chain and improves web page load times and reduces bandwidth consumption. 
+
+The amount of time that the DNS records are stored in DNS cache is called time to live or TTL. This period of time is important as it determines how “fresh” the DNS records are and whether it matches recent updates to IP addresses.
+
+DNS caching can be done at the browser level or at the operating system (OS level).
+
+    Browser DNS Caching
+
+Since web browsers generally store DNS records for a set amount of time, it is usually the first place that is checked when a user makes a DNS record. Being on the browser, there are fewer steps involved in checking the DNS cache and making the DNS request to an IP address.
+
+    Operating system (OS) level DNS caching
+
+Once a DNS query leaves an end user’s machine, the next stop where a match is sought is at the operating system level. A process inside the operating system, called the “stub resolver” checks its own DNS cache to see if it has the record. If not, the query is sent outside the local network to the Internet Service Provider (ISP).
+How Does a DNS Work?
+
+The DNS is responsible for converting the hostname, what we commonly refer to as the website or web page name, to the IP address. The act of entering the domain name is referred to as a DNS query and the process of finding the corresponding IP address is known as DNS resolution.
+
+DNS queries can be of three types: recursive query, iterative query or non-recursive query.
+
+    Recursive query – These are queries where a DNS server has to respond with the requested resource record. If a record cannot be found, the DNS client has to be shown an error message.
+    Iterative query – These are queries for which the DNS client will continue to request a response from multiple DNS servers until the best response is found, or an error or timeout occurs. If the DNS server is unable to find a match for the query, it will refer to a DNS server authoritative for a lower level of the domain namespace. This referral address is then queried by the DNS client and this process continues with additional DNS servers.
+    Non-recursive query – these are queries which are resolved by a DNS resolver when the requested resource is available, either due to the server being authoritative or because the resource is already stored in cache.
+
+The Different Types of DNS Server
+
+Once a DNS query is entered, it passes through a few different servers before resolution, without any end user interaction.
+
+    DNS recursor 
+
+This is a server designed specifically to receive queries from client machines. It tracks down the DNS record and makes additional requests to meet the DNS queries from the client. The number of requests can be decreased with DNS caching, when the requested resources are returned to the recursor early on in the lookup process.
+
+    Root name server
+
+This server does the job of translating the human-friendly host names into computer-friendly IP addresses. The root server accepts the recursor’s query and sends it to the TLD nameservers in the next stage, depending on the domain name seen in the query.
+
+    Top Level Domain (TLD) nameserver
+
+The TLD nameservers are responsible for maintaining the information about the domain names. For example, they could contain information about websites ending in “.com” or “.org” or country level domains like “www.example.com.uk”, “www.example.com.us” and others. The TLD nameserver will take the query from the root server and point it to the authoritative DNS nameserver associated with the query’s particular domain.
+
+    Authoritative nameserver
+
+ In the last step, the authoritative DNS nameserver will return the IP address back to the DNS recursor that can relay it to the client. This authoritative DNS nameserver is the one at the bottom of the lookup process that holds the DNS records. Think of these as the last stop or the final authoritative source of truth in the process.
+DNS Lookup vs DNS Resolver
+
+The process by which a DNS server returns a DNS record is called a DNS lookup. It involves the query of the hostname from the web browser to the DNS lookup process on the DNS server and back again. The DNS resolver is the server that deals with the first step in the DNS lookup process and which starts the sequence of steps that end in the URL being translated into the IP address for loading the web pages.
+
+First, the user-entered hostname query travels from the web browser to the internet and is received by the DNS recursive resolver. The recursive DNS server then queries the DNS root server which responds with the address of the to the TLD server responsible for storing the domains.
+
+The resolver then makes a DNS request to the corresponding domain’s TLD and receives the IP address of the domain nameserver. As a last step, the recursive DNS server queries the domain nameserver and is returned with the IP address to send to the web browser. It is after this DNS lookup process is done that the browser can request for individual web pages through HTTP requests.
+
+These steps make up a standard DNS lookup process but they can be shortened with DNS caching. DNS caching allows the storage of the DNS lookup information locally on the browser, the operating system or a remote DNS infrastructure, which allows some of the steps to be skipped for faster loading.
+
