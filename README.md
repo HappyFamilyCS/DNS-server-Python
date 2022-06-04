@@ -1,3 +1,7 @@
+#DNS developers Team:
+1. Safiullah Jalalzai (Team Member)
+
+
 # DNS-server-Python
 DNS Server in Python programming language
 
