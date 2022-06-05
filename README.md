@@ -1,5 +1,6 @@
 #DNS developers Team:
 1. Safiullah Jalalzai (Team Member)
+2. Khalid Ahmad Mubaraze
 
 
 # DNS-server-Python
