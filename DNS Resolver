@@ -1,0 +1,1 @@
+A user types 'example.com' into a web browser and the query travels into the Internet and is received by a DNS recursive resolver. The resolver then queries a DNS root nameserver (.). The root server then responds to the resolver with the address of a Top Level Domain (TLD) DNS server (such as .com or .
