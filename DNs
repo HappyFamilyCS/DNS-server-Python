@@ -1,0 +1,5 @@
+# # Domain Name System(DNS)
+
+The Domain Name System (DNS) Server is a server that is specifically used for matching website hostnames (like example.com)to their corresponding Internet Protocol or IP addresses. The DNS server contains a database of public IP addresses and their corresponding domain names. Every device connected to the internet has a unique IP address that helps to identify it, according to the IPv4 or IPV6 protocols. The same goes for web servers that host websites. For example, the IP address of one CDNetworks server located in Mountain View, California is 157.185.170.144.
+
+DNS servers help us avoid memorization of such long numbers in IP addresses (and even more complex alphanumeric ones in the IPV6 system) as they automatically translate the website names we enter into the browser address bar into these numbers so that the servers can load the right web pages.
