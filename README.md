@@ -1,4 +1,4 @@
-#DNS developers Team:
+#Team Member:
 1. Safiullah Jalalzai (Team Member)
 2. Khalid Ahmad Mubaraze
 
@@ -22,6 +22,10 @@ DNS queries can be of three types: recursive query, iterative query or non-recur
     Iterative query – These are queries for which the DNS client will continue to request a response from multiple DNS servers until the best response is found, or an error or timeout occurs. If the DNS server is unable to find a match for the query, it will refer to a DNS server authoritative for a lower level of the domain namespace. This referral address is then queried by the DNS client and this process continues with additional DNS servers.
     Non-recursive query – these are queries which are resolved by a DNS resolver when the requested resource is available, either due to the server being authoritative or because the resource is already stored in cache.
     
-    
+introduction
+#implementation:
+before implementing of code, DNS resovler downloding is necessiry.
+   
 #Important Information Before Implementation:
 
+ main
