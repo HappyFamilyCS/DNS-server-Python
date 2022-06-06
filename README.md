@@ -1,7 +1,7 @@
 #Team Member:
 1. Safiullah Jalalzai (Team Member)
 2. Khalid Ahmad Mubaraze
-
+3. Esmatullah Yasir
 
 # DNS-server-Python
 DNS Server in Python programming language
